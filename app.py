@@ -18,6 +18,6 @@ CORS(app)
 def main():
     return jsonify('Hello World')
 
-# 2019
+# 2019 new year
 if __name__ == '__main__':
     app.run()
