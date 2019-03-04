@@ -1,5 +1,6 @@
 import json
 import random
+import unittest
 
 player_list = {}
 player_temp = {
@@ -27,6 +28,7 @@ def add_player(player_name):  # type\ string
         player_list[player_name] = temp
         spawn_player(player_name)
         leaderboard.append(temp)
+    return temp
 
 
 def remove_player(player_name):  # type\ string
@@ -76,3 +78,9 @@ def player_to_json(player_name):  # type\ string
 
 def leaderboard_to_json():
     return json.dumps(leaderboard)
+
+
+class MyTest(unittest.TestCase):
+    def test_add_player(self):
+        self.assertEuqal(add_player("Peter"), player_list["Peter"])
+
