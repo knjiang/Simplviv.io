@@ -37,9 +37,9 @@ def remove_user():
     return 'leave'
 @app.route('/players', methods= ['GET'])
 def players():
-    with open('data.txt') as f:
-        lines = f.read().splitlines()
-        return str(lines)
+    f = open('data.txt',"r")
+    lines = f.read().splitlines()
+    return jsonify(lines)
 
 if __name__ == "__main__":
     app.run(debug=True)
