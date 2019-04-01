@@ -19,7 +19,6 @@ var game = new Phaser.Game(config);
 let cursors;
 let player;
 let spaceKey;
-let TKey;
 let tutorial;
 
 function preload(){
@@ -39,6 +38,16 @@ function create() {
         .setScrollFactor(0)
         .setDepth(30);
     const layer1 = map.createStaticLayer("f1", tileset, 0,0);
+    const hp = this.add.text(0,585,'HP: 100/100',{
+        font: '16px Monospace',
+        backgroundColor: "##00FFFFFF",
+    }).setScrollFactor(0)
+        .setDepth(30);
+    const ammo = this.add.text(695,585,'AMMO: 30/30',{
+        font: '16px Monospace',
+        backgroundColor: "##00FFFFFF",
+    }).setScrollFactor(0)
+        .setDepth(30);
     const camera = this.cameras.main;
     player = this.physics.add.sprite(200,300,'player')
     player.angle = 0;
