@@ -67,7 +67,21 @@ function create() {
             this.setActive(true);
             this.setVisible(true);
             this.velocity.setTo(0, -this.speed);
-            Phaser.Math.Rotate(this.velocity, direction);
+            console.log(direction);
+            if (direction == 0){
+                console.log('right shot')
+                this.velocity.x = this.speed;
+                this.velocity.y = 0;
+            } else if (direction == -90){
+                this.velocity.y = -this.speed;
+                this.velocity.x = 0;
+            }else if (direction == 90){
+                this.velocity.y = this.speed;
+                this.velocity.x = 0;
+            } else if (direction == -180){
+                this.velocity.x = -this.speed;
+                this.velocity.y = 0;
+            }
         },
 
         update: function (time, delta) {
@@ -109,10 +123,11 @@ function update(time,delta) {
     }
     if (spaceKey.isDown){
         var bullet = bullets.get();
-
+        console.log(bullet.length)
+        console.log(bullets.length)
         if (bullet)
         {
-            bullet.fire(player.x, player.y,player.angle - 180);
+            bullet.fire(player.x, player.y,player.angle);
         }
     }
 }
