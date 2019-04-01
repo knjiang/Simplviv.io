@@ -38,6 +38,7 @@ function create() {
         .setScrollFactor(0)
         .setDepth(30);
     const layer1 = map.createStaticLayer("f1", tileset, 0,0);
+    const layer2 = map.createStaticLayer("f2", tileset, 0,0);
     const hp = this.add.text(0,585,'HP: 100/100',{
         font: '16px Monospace',
         backgroundColor: "##00FFFFFF",
