@@ -8,7 +8,4 @@ describe('Phaser Tests:', function () {
             done();
         });
     });
-    it('Server Running', function() {
-        expect(player.x).to.equal(200)
-    });
 })

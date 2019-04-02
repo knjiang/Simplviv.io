@@ -133,8 +133,6 @@ function update(time,delta) {
     }
     if (spaceKey.isDown){
         var bullet = bullets.get();
-        console.log(bullet.length)
-        console.log(bullets.length)
         if (bullet)
         {
             bullet.fire(player.x, player.y,player.angle);
