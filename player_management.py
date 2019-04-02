@@ -8,15 +8,15 @@ player_temp = {
     "hp": 100,
     "armor": 0,
     "speed": 1,
-    "weapon": "00",
+    "weapon": 20,
     "kills": 0,
     "deaths": 0,
     "x_pos": 0,
     "y_pos": 0
 }
 leaderboard = []
-map_x = 100
-map_y = 100
+map_x = 50
+map_y = 50
 
 
 def add_player(player_name):  # type\ string
@@ -79,8 +79,4 @@ def player_to_json(player_name):  # type\ string
 def leaderboard_to_json():
     return json.dumps(leaderboard)
 
-
-class MyTest(unittest.TestCase):
-    def test_add_player(self):
-        self.assertEuqal(add_player("Peter"), player_list["Peter"])
 
