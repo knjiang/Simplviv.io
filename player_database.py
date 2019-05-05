@@ -28,9 +28,9 @@ def add_player(playername):
     session = Session()
     if session.query(Player).filter_by(username=playername).count() == 0:
         new_player = Player(username=playername, kills=0, deaths=0)
+        session.add(new_player)
     else:
         return -1
-    session.add(new_player)
     session.commit()
 
 
