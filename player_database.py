@@ -40,7 +40,7 @@ def delete_player(playername):
     session.commit()
 
 
-def delete_all():
+def delete_all():  # delete all records
     session = Session()
     session.query(Player).delete()
     session.commit()

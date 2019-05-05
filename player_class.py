@@ -6,7 +6,6 @@ class player_class:
     def __init__(self, in_name):
         self.name = in_name
         self.hp = 100
-        self.armor = 0
         self.kills = 0
         self.deaths = 0
         self.pos = [random.randint(1, 50), random.randint(1, 50)]
