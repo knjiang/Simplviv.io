@@ -1,0 +1,30 @@
+{
+  "name": "cse116projectsurvivio",
+  "version": "1.0.0",
+  "description": "CSE 116 Semester Project by Ken, Xiaoang, and HiuLaam",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha --phaser test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenJiangg/CSE116SemesterProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenJiangg/CSE116SemesterProject/issues"
+  },
+  "homepage": "https://github.com/KenJiangg/CSE116SemesterProject#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "electron": "^4.1.3",
+    "mocha": "^6.0.2",
+    "phaser": "^3.16.2",
+    "request": "^2.88.0"
+  }
+}
