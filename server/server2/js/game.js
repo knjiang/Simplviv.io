@@ -131,8 +131,10 @@ function update(time,delta) {
                 var dx = players[id].x - bullet.x;
                 var dy = players[id].y - bullet.y;
                 var dist = Math.sqrt(dx * dx + dy * dy);
-                if(dist < 70){
+                if(dist < 10){
                     if (players[bullet.owner]){
+                        bullets_array.splice(i,1);
+                        i--;
                         players[bullet.owner].score += 1;
                     }
                 }
