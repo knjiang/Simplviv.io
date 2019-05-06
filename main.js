@@ -5,7 +5,7 @@ function createWindow () {
     let win = new BrowserWindow({ width: 820, height: 635 })
 
     // and load the index.html of the app.
-    win.loadFile('index.html')
+    win.loadURL("http://localhost:8081");
 }
 
 app.on('ready', createWindow)

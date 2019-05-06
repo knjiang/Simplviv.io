@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/KenJiangg/CSE116SemesterProject#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "canvas": "^2.4.1",
+    "datauri": "^2.0.0",
+    "express": "^4.16.4",
+    "jsdom": "^15.0.0",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
