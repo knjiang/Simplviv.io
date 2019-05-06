@@ -1,5 +1,6 @@
 import json
 import random
+import math
 
 
 class player_class:
@@ -10,6 +11,7 @@ class player_class:
         self.deaths = 0
         self.pos = [random.randint(1, 50), random.randint(1, 50)]
         self.killed_by = ""
+        self.size = 5
 
     def kill_some(self):
         self.kills = self.kills + 1
@@ -31,6 +33,11 @@ class player_class:
 
     def reset_position(self):
         self.pos = (random.randint(1, 50), random.randint(1, 50))
+
+    def hit_detection(self, bullet_list):  # parameter bullet_list is a list containing a list of bullet
+        for x in bullet_list:  # the structure of bullet_list is like [[pos_x, pos_y, shooter_name]]
+            if math.sqrt((x[0] - self.pos[0]) ** 2 + (x[1] - self.pos[1]) ** 2) <= self.size:
+                self.get_shot(bullet_list[2])
 
     def to_json(self):
         return json.dumps([self.name, self.hp, self.kills, self.deaths, self.pos])
