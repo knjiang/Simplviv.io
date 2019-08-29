@@ -1,4 +1,4 @@
-# CSE116SemesterProject
+# Simplviv.io
 Surviv.io but simple
 
 Built using Phaser.io, Node.js, Flask. 
